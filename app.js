@@ -35,6 +35,7 @@ window.onload = function(){
             }]
         },
         options: {
+            maintainAspectRatio: false,
             legend: {
                 display: false
             },
