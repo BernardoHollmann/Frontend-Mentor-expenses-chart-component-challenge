@@ -65,6 +65,7 @@ article{
     background-color: var(--Very-pale-orange);
     padding: 1rem 2rem;
     border-radius: 15px;
+    color: var(--Dark-brown);
 }
 
 section{
@@ -80,12 +81,21 @@ h1{
     height: 100%;
 }
 
+.chart:hover{
+    cursor: pointer;
+}
+
+.graph{
+    height: 300px;
+}
+
 .info{
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid var(--Medium-brown);
     width: 100%;
+    height: 200px
 }
 
 p{
@@ -97,10 +107,53 @@ p{
     text-align: start;
 }
 
+.this-month h2{
+    font-size: 3rem;
+}
+
 .last-month{
     text-align: end;
 }
 
+@media screen and (max-width: 570px) {
+    nav{
+        width: 470px;
+    }
+    
+    article{
+        width: 470px;
+    }
+}
 
+@media screen and (max-width: 500px) {
+    nav{
+        width: 380px;
+    }
+    
+    article{
+        width: 380px;
+    }
 
+    
+    canvas{
+        margin-top: 4rem;
+    }
 
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .this-month h2{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    nav{
+        width: 350px;
+    }
+    
+    article{
+        width: 350px;
+    }
+}

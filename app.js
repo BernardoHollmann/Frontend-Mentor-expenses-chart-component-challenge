@@ -22,16 +22,32 @@ window.onload = function(){
         data: {
             labels: xValues,
             datasets: [{
-                backgroundColor: barColors,
+                backgroundColor: [
+                    barColors,
+                    barColors,
+                    'hsl(186, 34%, 60%)',
+                    barColors,
+                    barColors,
+                    barColors,
+                    barColors
+                  ],
                 data: yValues
             }]
         },
         options: {
+            legend: {
+                display: false
+            },
             tooltips: {
+                yAlign: 'bottom',
+                displayColors: false,
                 callbacks: {
-                  title: function(tooltipItem, data) {
-                    return ''
-                  },
+                    title: function(tooltipItem, data) {
+                        return ''
+                    },
+                    label: function(tooltipItem) {
+                        return "$" + Number(tooltipItem.yLabel);
+                    },
                 }
             },
             scales: {
